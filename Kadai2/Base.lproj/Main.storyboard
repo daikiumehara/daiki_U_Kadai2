@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kadai2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XW1-vv-A2x">
+                                <rect key="frame" x="157" y="69" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="YiN-j6-Mcw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ji-iU-h2N">
+                                <rect key="frame" x="157" y="113" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="b9S-Dt-6XA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BKB-hH-ywF">
+                                <rect key="frame" x="107" y="157" width="200" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Oh9-WU-8Qb"/>
+                                    <constraint firstAttribute="width" constant="200" id="ZdN-nb-DqQ"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="" image="plus" catalog="system"/>
+                                    <segment title="" image="minus" catalog="system"/>
+                                    <segment title="" image="multiply" catalog="system"/>
+                                    <segment title="" image="divide" catalog="system"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3Y-cX-OHV">
+                                <rect key="frame" x="184" y="227" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="calcButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LAW-xP-IMH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9u-4d-dKS">
+                                <rect key="frame" x="30" y="277" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BKB-hH-ywF" firstAttribute="top" secondItem="5ji-iU-h2N" secondAttribute="bottom" constant="10" id="5aZ-K7-x7X"/>
+                            <constraint firstItem="I3Y-cX-OHV" firstAttribute="top" secondItem="BKB-hH-ywF" secondAttribute="bottom" constant="20" id="AUK-Or-0eu"/>
+                            <constraint firstItem="XW1-vv-A2x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KAb-7j-aUG"/>
+                            <constraint firstItem="5ji-iU-h2N" firstAttribute="top" secondItem="XW1-vv-A2x" secondAttribute="bottom" constant="10" id="OOG-Ee-6aJ"/>
+                            <constraint firstItem="m9u-4d-dKS" firstAttribute="top" secondItem="I3Y-cX-OHV" secondAttribute="bottom" constant="20" id="TWh-e0-qFb"/>
+                            <constraint firstItem="BKB-hH-ywF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TeB-fo-8PP"/>
+                            <constraint firstItem="m9u-4d-dKS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="WBe-Ga-1Va"/>
+                            <constraint firstItem="XW1-vv-A2x" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="XXe-sg-wtx"/>
+                            <constraint firstItem="5ji-iU-h2N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aj1-XL-1vg"/>
+                            <constraint firstItem="I3Y-cX-OHV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ohn-wB-NBQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="m9u-4d-dKS" id="pCQ-fB-qmZ"/>
+                        <outlet property="calcButton" destination="I3Y-cX-OHV" id="59L-RU-N5L"/>
+                        <outlet property="firstTextField" destination="XW1-vv-A2x" id="fnh-F7-VeB"/>
+                        <outlet property="operatorSegmented" destination="BKB-hH-ywF" id="0LP-CC-aJK"/>
+                        <outlet property="secondTextField" destination="5ji-iU-h2N" id="ncd-HD-2DP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="107" y="89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="divide" catalog="system" width="128" height="103"/>
+        <image name="minus" catalog="system" width="128" height="24"/>
+        <image name="multiply" catalog="system" width="128" height="111"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
