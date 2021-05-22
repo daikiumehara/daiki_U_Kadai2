@@ -20,13 +20,13 @@ final class ViewController: UIViewController {
     }
     private func getCalcResultString(_ firstValue: Double, _ secondValue: Double) -> String {
         switch operatorSegmented.selectedSegmentIndex {
-        case 0:
+        case 0: // +が選択された時
             return String(firstValue + secondValue)
-        case 1:
+        case 1: // -が選択された時
             return String(firstValue - secondValue)
-        case 2:
+        case 2: // ×が選択された時
             return String(firstValue * secondValue)
-        case 3:
+        case 3: // ÷が選択された時
             if secondValue == 0.0 {
                 return "割る数には0以外を入力してください"
             }
