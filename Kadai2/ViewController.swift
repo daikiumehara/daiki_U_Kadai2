@@ -7,6 +7,10 @@
 
 import UIKit
 
+enum Operator: Int {
+    case plus, minus, multiply, divide
+}
+
 final class ViewController: UIViewController {
     @IBOutlet private var firstTextField: UITextField!
     @IBOutlet private var secondTextField: UITextField!
@@ -19,14 +23,14 @@ final class ViewController: UIViewController {
         return value
     }
     private func getCalcResultString(_ firstValue: Double, _ secondValue: Double) -> String {
-        switch operatorSegmented.selectedSegmentIndex {
-        case 0: // +が選択された時
+        switch Operator(rawValue: operatorSegmented.selectedSegmentIndex) {
+        case .plus: // +が選択された時
             return String(firstValue + secondValue)
-        case 1: // -が選択された時
+        case .minus: // -が選択された時
             return String(firstValue - secondValue)
-        case 2: // ×が選択された時
+        case .multiply: // ×が選択された時
             return String(firstValue * secondValue)
-        case 3: // ÷が選択された時
+        case .divide:
             if secondValue == 0.0 {
                 return "割る数には0以外を入力してください"
             }
