@@ -7,21 +7,15 @@
 
 import UIKit
 
-enum Operator: Int {
-    case plus, minus, multiply, divide
-}
-
 final class ViewController: UIViewController {
+    enum Operator: Int {
+        case plus, minus, multiply, divide
+    }
     @IBOutlet private var firstTextField: UITextField!
     @IBOutlet private var secondTextField: UITextField!
     @IBOutlet private var operatorSegmented: UISegmentedControl!
     @IBOutlet private var calcButton: UIButton!
     @IBOutlet private var answerLabel: UILabel!
-    private func stringToDouble(_ text: String?) -> Double? {
-        guard let text = text else { return nil }
-        guard let value = Double(text) else { return nil }
-        return value
-    }
     private func getCalcResultString(_ firstValue: Double, _ secondValue: Double) -> String {
         switch Operator(rawValue: operatorSegmented.selectedSegmentIndex) {
         case .plus: // +が選択された時
@@ -40,6 +34,11 @@ final class ViewController: UIViewController {
         }
     }
     @IBAction private func calcButtonDidTapped(_ sender: Any) {
+        func stringToDouble(_ text: String?) -> Double? {
+            guard let text = text else { return nil }
+            guard let value = Double(text) else { return nil }
+            return value
+        }
         guard let firstValue = stringToDouble(firstTextField.text),
               let secondValue = stringToDouble(secondTextField.text) else {
             answerLabel.text = "値を入力してください"
